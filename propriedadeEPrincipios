@@ -1,0 +1,57 @@
+*Documentação de Software: Cardápio Online com Estatísticas de Consumidores**
+
+## Introdução
+
+Este documento descreve os princípios e propriedades aplicados no desenvolvimento de uma aplicação web de cardápio online que gera estatísticas dos consumidores. 
+O objetivo é garantir a qualidade, manutenibilidade e escalabilidade do software.
+
+## Propriedades de Bons Projetos
+
+### 1. Integridade Conceitual
+
+- **Descrição**: A integridade conceitual assegura que o sistema mantenha a consistência e precisão dos conceitos e dados que representa.
+- **Aplicação ao Projeto**: Garantir que as informações sobre os itens do cardápio e as estatísticas dos consumidores sejam precisas e consistentes em todas as partes da aplicação.
+
+### 2. Ocultamento de Informação
+
+- **Descrição**: O princípio do ocultamento de informação preconiza que os detalhes internos do funcionamento do sistema devem ser ocultados e acessados apenas por interfaces bem definidas.
+- **Aplicação ao Projeto**: Encapsular as funcionalidades relacionadas à geração de estatísticas dos consumidores, expondo apenas as interfaces públicas necessárias para acessar e manipular esses dados.
+
+### 3. Coesão
+
+- **Descrição**: A coesão refere-se ao grau em que os elementos dentro de um módulo estão relacionados entre si. Um alto nível de coesão indica que os elementos do módulo funcionam bem juntos e têm um propósito comum.
+- **Aplicação ao Projeto**: Agrupar as funcionalidades relacionadas à gestão do cardápio e à geração de estatísticas dos consumidores em módulos separados, mantendo-os coesos e focados em suas responsabilidades específicas.
+
+### 4. Acoplamento
+
+- **Descrição**: O acoplamento refere-se à dependência entre os diferentes módulos ou componentes de um sistema. Um baixo acoplamento indica que as alterações em um componente têm pouco impacto nos outros.
+- **Aplicação ao Projeto**: Minimizar o acoplamento entre os módulos responsáveis pela gestão do cardápio e pela geração de estatísticas dos consumidores, utilizando técnicas como injeção de dependência e design de interfaces bem definidas.
+
+## Princípios de Bons Projetos
+
+### 1. SOLID
+
+- **Descrição**: SOLID é um acrônimo que representa cinco princípios de design de software: 
+  - **S** - Single Responsibility Principle (Princípio da Responsabilidade Única)
+  - **O** - Open/Closed Principle (Princípio Aberto/Fechado)
+  - **L** - Liskov Substitution Principle (Princípio da Substituição de Liskov)
+  - **I** - Interface Segregation Principle (Princípio da Segregação de Interfaces)
+  - **D** - Dependency Inversion Principle (Princípio da Inversão de Dependências)
+- **Aplicação ao Projeto**: 
+  - **Single Responsibility Principle**: Cada classe ou módulo deve ter apenas uma razão para mudar. Por exemplo, uma classe deve ser responsável apenas pela gestão do cardápio ou apenas pela geração de estatísticas dos consumidores.
+  - **Interface Segregation Principle**: Prefira interfaces específicas e coesas em vez de interfaces gerais. Por exemplo, defina interfaces separadas para a gestão do cardápio e para a geração de estatísticas, em vez de uma única interface genérica.
+  - **Dependency Inversion Principle**: Dependa de abstrações, não de implementações concretas. Por exemplo, ao injetar dependências nos módulos relacionados ao cardápio e às estatísticas dos consumidores, utilize interfaces em vez de classes concretas.
+
+### 2. Prefira Interfaces a Classes
+
+- **Descrição**: Este princípio sugere que as interações entre os módulos devem ser definidas em termos de interfaces abstratas, em vez de classes concretas.
+- **Aplicação ao Projeto**: Defina interfaces claras e coesas para as funcionalidades relacionadas à gestão do cardápio e à geração de estatísticas dos consumidores, permitindo a substituição de implementações sem afetar o restante do sistema.
+
+### 3. Princípio de Demeter
+
+- **Descrição**: O princípio de Demeter, ou Lei do Demeter, sugere que um módulo deve conhecer apenas seus vizinhos imediatos, não toda a estrutura interna do sistema.
+- **Aplicação ao Projeto**: Evite acessar diretamente objetos internos de outros módulos. Em vez disso, interaja apenas com as interfaces públicas fornecidas por esses módulos, reduzindo o acoplamento e tornando o sistema mais flexível e fácil de manter.
+
+## Conclusão
+
+A aplicação consistente dos princípios e propriedades de bons projetos descritos neste documento garantirá que a aplicação de cardápio online com estatísticas de consumidores seja robusta, coesa, de fácil manutenção e escalável. Essas diretrizes ajudarão a promover a qualidade do software e a facilitar o desenvolvimento e a evolução contínua do sistema.
